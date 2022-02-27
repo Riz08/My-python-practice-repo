@@ -1,0 +1,151 @@
+#tiktactoe game
+
+
+#First need to create a display board and test 
+
+board=["sample","1","2","3","4","5","6","7","8","9"]
+
+
+def display_board(board):
+    
+    print ("     |     |")
+    
+    print ("  " +  board[7] + "  |  " + board[8]  + "  | " +  board[9])
+    
+    print ("     |     |")
+    print ("-----------------")
+    print ("     |     |")
+    
+    print ("  " +  board[4] + "  |  " + board[5]  + "  | " +  board[6])
+    
+    print ("     |     |")
+    print ("-----------------") 
+    print ("     |     |")
+    print ("  " +  board[1] + "  |  " + board[2]  + "  | " +  board[3])
+    
+    print ("     |     |")
+    
+
+display_board(board)
+
+test_board = ['#','X','O','X','O','X','O','X','O','X']
+display_board(test_board)
+
+
+
+
+
+
+# make a user input of x and o and while loop for correcting until gets answer
+
+
+def user_input():
+    word=""
+    
+    while word not in ["X","O"]:
+        word= input("Put a letter between X and O: ")
+    return (word)
+
+
+user_input()
+
+
+
+
+
+
+
+
+
+
+#want input for the position number where you want it to be placed
+
+def position_input():
+    position= ""
+    #ran= ["1","9"]  #if I put without colon and use range the loop does not close as input is always string
+    ran = ["1","2","3","4","5","6","7","8","9"]
+    
+    while position not in ran:
+        position= input ("Put the number between 1 to 9: ")
+    return (position)
+
+
+position_input()
+
+
+
+
+
+
+
+
+#Write a function that takes in the board list object, a marker ('X' or 'O'), and a desired position (number 1-9) and assigns it to the board.
+#And then test it
+
+def place_marker(board,word,position): # what values are needed
+    board[position]= word # how they are related for use and implementation formula
+
+    
+#test
+place_marker(board,"@",4)
+display_board(board) #where to be implemented
+
+
+
+
+
+
+
+
+#Write a function that takes in a board and checks to see if someone has won and test
+
+
+def win_check(board,word): # what variables are needed. if they are new need to create them 
+    if board[7] == word and board[8] == word and board[9] == word:
+        return ("You have own the game")
+    elif board[4] == word and board[5] == word and board[6] == word:
+        return ("You have own the game")
+    elif board[1] == word and board[2] == word and board[3] == word:
+        return ("You have own the game")
+    elif board[7] == word and board[4] == word and board[1] == word:
+        return ("You have own the game")
+    elif board[8] == word and board[5] == word and board[2] == word:
+        return ("You have own the game")
+    elif board[9] == word and board[6] == word and board[3] == word:
+        return ("You have own the game")
+    elif board[7] == word and board[5] == word and board[3] == word:
+        return ("You have own the game")
+    elif board[9] == word and board[5] == word and board[1] == word:
+        return ("You have own the game")
+    else:
+        return ("No one has won")
+
+win_check(test_board,"X")
+
+
+#now need to select a player who will play first randomly
+
+
+import random   # random.randint selects a random number out of several numbers
+
+def ran_selection():
+    if random.randint(0,1)==0:
+        return "Player 1  WILL START PLAYING FIRST"
+    else:
+        return "Player 2  WILL START PLAYING FIRST"
+
+    
+ran_selection()
+
+
+#FIIND OUT IF THE PLACE IN BOARD IS FREE
+
+def check_free(board,position):
+    if board[position]== " ":  #NEED TO USE == ATER USING IF STATEMENT
+        return True
+    else:
+        return False
+
+
+
+check_free(board,5)
