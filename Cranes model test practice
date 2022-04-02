@@ -1,0 +1,151 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled3.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOAZaMgY9b4Dfqd15KVIGgp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Riz08/My-python-practice-repo/blob/main/Cranes%20model%20test%20practice\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gTZoC4Yspk_7",
+        "outputId": "d023daf3-9f41-43fa-dc90-4a3b9c3400e3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "112358"
+          ]
+        }
+      ],
+      "source": [
+        "a,b=0,1\n",
+        "while b<10:\n",
+        "  print(b, end=\"\");a,b=b,a+b"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=\"Sikandaraaa\"\n",
+        "\n",
+        "print((set(a)))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CuWxrSLhpzbD",
+        "outputId": "e82a01a8-247d-456a-b9c0-2da1680c9f42"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'S', 'k', 'r', 'd', 'n', 'a', 'i'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a= \"MDRIZABINTAHER\"\n",
+        "\n",
+        "\n",
+        "b=set(a)\n",
+        "print(\"\".join(sorted(b)))\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OI3S6dBRqbfO",
+        "outputId": "e9fa37c0-6080-4b0b-dbc7-e7e0aba88b6f"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ABDEHIMNRTZ\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=input( \"Write a string: \")\n",
+        "b=input(\"Write a sub string: \")\n",
+        "\n",
+        "c=a.count(b)\n",
+        "print(\"The total occur time is\",c)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V-_9Y2pdsgHQ",
+        "outputId": "c311d0d0-6cc3-4296-f8c7-4093f4028a5c"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Write a string: RIZATIZA\n",
+            "Write a sub string: ZA\n",
+            "The total occur time is 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "K9gpPwAovaA-"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
